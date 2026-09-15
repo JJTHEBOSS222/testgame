@@ -73,10 +73,11 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     50,
     true
     )
-    music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.LoopingInBackground)
+    music.play(music.melodyPlayable(music.footstep), music.PlaybackMode.LoopingInBackground)
 })
 controller.down.onEvent(ControllerButtonEvent.Released, function () {
     animation.stopAnimation(animation.AnimationTypes.All, mySprite)
+    music.stopAllSounds()
 })
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
